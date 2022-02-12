@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+#container {
+  display: flex;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+#game {
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+
+header {
+  border-bottom: 1px solid rgb(58, 58, 60);
+}
+
+.title {
+  color: gainsboro;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.4rem 0 0.4rem 0;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+  /* border: 2px solid white; */
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+  box-sizing: border-box;
+}
+
+.square {
+  border: 2px solid rgb(58, 58, 60);
+  min-width: 60px;
+  min-height: 60px;
+  font-size: 50px;
+  font-weight: bold;
+  color: gainsboro;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keyboard-container {
+  height: 200px;
+  /* border: 2px solid white; */
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 0px; 
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 8px;
+  touch-action: manipulation;
+}
+
+.keyboard-row button {
+  font-family: inherit;
+  font-weight: bold;
+  border: 0;
+  padding: 0;
+  height: 58px;
+  cursor: pointer;
+  background-color: rgb(129, 131, 132);
+  color: rgb(215, 218, 220);
+  flex-grow: 1;
+  text-transform: uppercase;
+  margin-right: 6px;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.keyboard-row button.wide-button {
+  flex-grow: 1.5;
+  background-color: rgb(158, 0, 0);
+}
+
+.spacer-half {
+  flex-grow: 0.5;
+}
+
+
+#nextbutton{
+  /* display: none; */
+  height: 50px;
+  width: 50px;
+  background-color: aliceblue;
+  z-index: 100;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+#next{
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  /* display: none; */
+}
+
+#nextbtndiv{
+  /* display: none; */
+}
+
+#next i{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: rgb(158, 0, 0);
+
+}
+
+#mycontainer{
+  height: 100%;
+  width: 100%;
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: space-between;
+}
+
+#question{
+  color: white;
+  font-size: 30px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  text-align: center;
+
+}
+
+#my-board-container{
+  margin-bottom: 0px;
+  margin-top: 30px;
+  text-align: center;
+  height: 100%;
+}
+
+  
+.ky{
+  width: 100%;
+  height: 100%;
+}
+
+#hint-remark-container{
+  display: flex;
+  flex-direction: column;
+}
+
+#hint{
+  flex: 1;
+  background-color: rgb(149, 149, 233);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+#remark{
+  flex: 1;
+  background-color: rgb(250, 131, 131);
+  color: white;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.starting-modal{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  background-color: black;
+  opacity: 0.9;
+  transition: opacity 0.8s ease-in;
+  transition: z-index 0.8s ease-in 1s;
+}
+
+.modal-container{
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.exit{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10%;
+  padding: 10px 20px;
+  font-size: 24px;
+}
+
+.ending-modal{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  background-color: black;
+  opacity: 0.9;
+  transition: opacity 0.8s ease-in;
+  transition: z-index 0.8s ease-in 1s;
+
+}
