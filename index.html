@@ -19,10 +19,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- My Javascript -->
-    <script src="js/main5.js"></script>
+    <script src="script.js"></script>
 
     <!-- Bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -31,16 +31,21 @@
   <body>
 
   <div class="starting-modal">
+    <h1 class="start-heading"> I made this game for you.</h1>
+    <h1 class="start-heading"> A surprise is waiting for you at the end of this game!</h1>
     <div class="modal-container">
-      <button class="exit btn-danger">Start</button>
+      <div class="lds-heart" id="heart-animation"><div></div></div>
+      <button class="exit btn-danger">Start the game</button>
     </div>
   </div>
-
+<!-- 
   <div class="ending-modal">
     <div class="modal-container">
-      <button class="exit btn-danger">Start</button>
+      <div class="lds-heart" id="heart-animation"><div></div></div>
+      <button class="exit btn-danger" id="end-display-button"><a href="second.html">Finish</a></button>
     </div>
-  </div>
+  </div> -->
+
 
     <div id="container">
       <div id="game">    
@@ -50,7 +55,7 @@
           <!-- header -->
           <div class="row">
             <header>
-              <h1 class="title">WORDLE</h1>
+              <h1 class="title">WORDLE FOR SHREYA</h1>
             </header>
           </div>
   
@@ -63,7 +68,7 @@
           <div class="row" id="my-board-container">
 
             <!-- hint -->
-            <div class="col" id="hint">This is a hint</div>
+            <div class="col" id="hint"></div>
 
             <!-- board -->
             <div class="col">
@@ -73,7 +78,7 @@
             </div>
             
             <!-- remark -->
-            <div class="col" id="remark">This is a remark</div>
+            <div class="col" id="remark"></div>
 
   
           <!-- Keyboard -->
@@ -119,7 +124,7 @@
               <!-- button -->
           <div class="row" id="nextbtndiv">
             <div id="nextbutton">
-              <button id="next"><i class="fa-solid fa-caret-right"></i></button>
+              <button id="next"><img src="heart.png" height ="100" width="100" /></button>
             </div>
           </div>
 
