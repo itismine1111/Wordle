@@ -80,6 +80,7 @@ body{
     opacity: 0.97;
     transition: opacity 0.8s ease-in;
     transition: z-index 0.8s ease-in 1s;
+    overflow: hidden;
   }
   
   .modal-container{
@@ -156,5 +157,16 @@ body{
     100% {
       transform: scale(0.9);
     }
+  }
+
+  #letterimages{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+  }
+
+  .letter{
+    height: 800px;
+    width: 400px;
   }
 
