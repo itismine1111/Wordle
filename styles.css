@@ -144,9 +144,9 @@ header {
   /* display: none; */
 }
 
-#nextbtndiv{
-  /* display: none; */
-}
+/* #nextbtndiv{
+  display: none;
+} */
 
 #next i{
   display: flex;
@@ -172,8 +172,10 @@ header {
   font-size: 30px;
   margin-bottom: 0px;
   margin-top: 30px;
-  text-align: center;
-
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #my-board-container{
@@ -187,6 +189,7 @@ header {
 .ky{
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 #hint-remark-container{
@@ -196,8 +199,8 @@ header {
 
 #hint{
   flex: 1;
-  background-color: rgb(149, 149, 233);
-  color: white;
+  /* background-color: rgb(149, 149, 233); */
+  color: rgb(137, 214, 199);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,13 +209,25 @@ header {
 
 #remark{
   flex: 1;
-  background-color: rgb(250, 131, 131);
-  color: white;
-  color: white;
+  /* background-color: rgb(250, 131, 131); */
+  color: rgb(211, 146, 232);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 30px;
+}
+
+.start-heading{
+  /* height: 100%;
+  width: 100%; */
+  top: 30%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .starting-modal{
@@ -223,7 +238,7 @@ header {
   left: 0;
   z-index: 200;
   background-color: black;
-  opacity: 0.9;
+  opacity: 0.97;
   transition: opacity 0.8s ease-in;
   transition: z-index 0.8s ease-in 1s;
 }
@@ -232,16 +247,31 @@ header {
   height: 100%;
   width: 100%;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .exit{
+  display: none;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 10%;
+  bottom: 35%;
   padding: 10px 20px;
   font-size: 24px;
 }
+
+#end-display-button{
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30%;
+  padding: 10px 20px;
+  font-size: 24px;
+}
+
 
 .ending-modal{
   height: 100%;
@@ -249,10 +279,78 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 200;
+  z-index: -1;
   background-color: black;
   opacity: 0.9;
   transition: opacity 0.8s ease-in;
   transition: z-index 0.8s ease-in 1s;
 
+}
+
+.disablediv{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 250;
+  background-color: black;
+  opacity: 0.5;
+}
+
+
+
+.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+}
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: rgb(158, 0, 0);
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: rgb(158, 0, 0);
+}
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
+  }
+  5% {
+    transform: scale(1.1);
+  }
+  39% {
+    transform: scale(0.85);
+  }
+  45% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(0.9);
+  }
 }
